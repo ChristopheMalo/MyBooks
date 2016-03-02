@@ -34,5 +34,5 @@ $app->register(new Silex\Provider\UrlGeneratorServiceProvider());
 // Book
 $app['dao.book'] = $app->share(function ($app)
 {
-    return new MicroCMS\DAO\BookDAO($app['db']);
+    return new MyBooks\DAO\BookDAO($app['db']);
 });
