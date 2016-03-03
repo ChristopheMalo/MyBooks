@@ -14,7 +14,7 @@
 {% block content %}
 {% for book in books %}
 <article>
-    <h1>{{ book.title }}</h1>
+    <h1><a class="bookTitle" href="{{ path('book', {'id': book.id}) }}">{{ book.title }}</a></h1>
     <p>{{ book.summary }}</p>
 </article>
 {% endfor %}
