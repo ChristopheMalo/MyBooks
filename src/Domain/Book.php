@@ -52,7 +52,7 @@ class Book {
     /**
      * Returns book id
      * 
-     * @return int $id
+     * @return int $id The book id
      */
     public function getId()
     {
@@ -62,7 +62,7 @@ class Book {
     /**
      * Returns book title
      * 
-     * @return string $title
+     * @return string $title The book title
      */
     public function getTitle()
     {
@@ -72,7 +72,7 @@ class Book {
     /**
      * Returns book isbn
      * 
-     * @return string
+     * @return string The book isbn
      */
     public function getIsbn()
     {
@@ -82,7 +82,7 @@ class Book {
     /**
      * Returns book summary
      * 
-     * @return string
+     * @return string The book summary
      */
     public function getSummary()
     {
@@ -92,7 +92,7 @@ class Book {
     /**
      * Returns book author (firstname - lastname)
      * 
-     * @return object \MyBooks\Domain\Author
+     * @return object \MyBooks\Domain\Author The book author
      */
     public function getAuthor()
     {
