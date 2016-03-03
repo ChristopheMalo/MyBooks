@@ -36,3 +36,9 @@ $app['dao.book'] = $app->share(function ($app)
 {
     return new MyBooks\DAO\BookDAO($app['db']);
 });
+
+// Author
+$app['dao.author'] = $app->share(function ($app)
+{
+    return new MyBooks\DAO\AuthorDAO($app['db']);
+});
