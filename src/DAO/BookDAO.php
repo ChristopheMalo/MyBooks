@@ -20,7 +20,7 @@ class BookDAO extends DAO {
      */
     public function findAll()
     {
-        $sql = "SELECT * FROM book ORDER BY book_id";
+        $sql = "SELECT * FROM book ORDER BY book_id DESC";
         $result = $this->getDb()->fetchAll($sql);
         
         $books = array();
@@ -28,11 +28,9 @@ class BookDAO extends DAO {
         {
             $bookId = $row['book_id'];
             $books[$bookId] = $this->buildDomainObject($row);
-            
-            return $books;
         }
-            
-                
+        
+        return $books;
     }
     
     /**
@@ -41,7 +39,8 @@ class BookDAO extends DAO {
      * @param array $row The database row containing book data
      * @return \MyBooks\Domain\Book
      */
-    protected function buildDomainObject($row) {
+    protected function buildDomainObject($row)
+    {
         $book = new Book();
         $book->setId($row['book_id']);
         $book->setTitle($row['book_title']);
