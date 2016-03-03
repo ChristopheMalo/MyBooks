@@ -6,6 +6,6 @@
         "symfony/twig-bridge": "3.*"
     },
     "autoload": {
-        "psr-4": {"MicroCMS\\": "src"}
+        "psr-4": {"MyBooks\\": "src"}
     }
 }
