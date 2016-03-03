@@ -1,0 +1,54 @@
+{#
+/**
+ * MyBooks
+ * =========================================================================================================
+ *
+ * Basic template application
+ * Each template will inherit this base
+ * 
+ * @author          Christophe Malo
+ * @version         1.0.0
+ * @copyright       OpenClassrooms - Baptiste Pesquet
+ */
+#}
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <meta name="description" content="A silex application">
+        <meta name="keywords" content="Silex, Twig, Doctrine, Symfony, HTML5, Bootstrap">
+        <meta name="author" content="Christophe Malo">
+            
+        <title>MyBooks - {% block title %}{% endblock %}</title>
+        
+        <link href="{{ app.request.basepath }}/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="{{ app.request.basepath }}/css/mybooks.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div class="container">
+            <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-target">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="{{ path('home') }}">MyBooks</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbar-collapse-target">
+                    </div>
+                </div>
+            </nav>
+
+            <section id="content" class="row">{% block content %}{% endblock %}</section>
+
+            <footer class="footer row">
+                <p><a href="https://github.com/ChristopheMalo/MyBooks">MyBooks</a> is a minimalist Web application type management books</p>
+            </footer>
+        </div>
+    </body>
+</html>
