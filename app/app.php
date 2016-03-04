@@ -32,7 +32,26 @@ $app->register(new Silex\Provider\UrlGeneratorServiceProvider());
 
 // Register services
 // Book
-$app['dao.book'] = $app->share(function ($app)
+//$app['dao.book'] = $app->share(function ($app)
+//{
+//    return new MyBooks\DAO\BookDAO($app['db']);
+//});
+
+// Author
+//$app['dao.author'] = $app->share(function ($app)
+//{
+//    return new MyBooks\DAO\AuthorDAO($app['db']);
+//});
+
+
+$app['dao.author'] = $app->share(function ($app)
 {
-    return new MyBooks\DAO\BookDAO($app['db']);
+    return new MyBooks\DAO\AuthorDAO($app['db']);
+});
+
+$app['dao.book'] = $app->share(function ($app) {
+    $bookDAO = new MyBooks\DAO\BookDAO($app['db']);
+    $bookDAO->setAuthorDAO($app['dao.author']);
+    
+    return $bookDAO;
 });
