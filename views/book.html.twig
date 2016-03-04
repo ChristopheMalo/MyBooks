@@ -15,7 +15,7 @@
 <article>
     <h1>{{ book.title }}</h1>
     <ul>
-        <li>Auteur : {{ author.firstname }} {{ author.lastname }}</li>
+        <li>Auteur : {{ book.author.firstname }} {{ book.author.lastname }}</li>
         <li>ISBN : {{ book.isbn }}</li>
     </ul>
     <p>{{ book.summary }}</p>
