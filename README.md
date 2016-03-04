@@ -7,6 +7,7 @@ MyBooks is a minimalist Web application type management books. It is built by su
 
 ## The main characteristics
 The main characteristics of the site are:
+
 - Viewing the list of books
 - Viewing details of a book
 - Using the MVC design pattern
@@ -34,8 +35,24 @@ The purpose: display the list of all books
 - Code the homepage route
 - Code the frontal controller
 - Code htaccess file
-- Code the Book class
-- Code the DAO class
+- Code the class Book
+- Code the class DAO
 - Code the class BookDAO
 - Code CSS file
 - Code layout and index view files
+
+## Iteration 2
+
+The purpose: display the details of a book in a single page
+
+- Code the class Author
+- Code the class AuthorDAO
+- Register the dao.author service in app file
+- Update the class Book to retrieve Author
+- Add method find() a book in BookDAO
+- Update routes file to display a detailed book
+- Code the view of a detailed book
+- Code the link to a detailed book in the view of index
+
+## Copyright
+**Une idée originale de Baptiste Pesquet pour :** [un TP Openclassrooms](https://openclassrooms.com/courses/evoluez-vers-une-architecture-php-professionnelle) - **Adaptation et réalisation :** Christophe Malo
