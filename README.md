@@ -55,4 +55,4 @@ The purpose: display the details of a book in a single page
 - Code the link to a detailed book in the view of index
 
 ## Copyright
-**An original idea of Baptiste Pesquet to :** [a work practice of Openclassrooms](https://openclassrooms.com/courses/evoluez-vers-une-architecture-php-professionnelle) - **Adapted and directed :** Christophe Malo
+**An original idea of Baptiste Pesquet for :** [a work practice of Openclassrooms](https://openclassrooms.com/courses/evoluez-vers-une-architecture-php-professionnelle) - **Adapted and directed :** Christophe Malo
